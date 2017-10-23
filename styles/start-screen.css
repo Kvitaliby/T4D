@@ -41,7 +41,7 @@
 }
 
 body {
-    background: gray;
+    height: auto;
     margin: 0;
     padding: 0;
 }
@@ -54,20 +54,22 @@ body {
 
 .start-screen {
     position: relative;
+    float: right;
     padding: 0;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 200;
+    width: 50%;
+    min-height: 100vh;
+    z-index: 10;
 }
 
 .start-screen .text {
     font-family: 'Lobster', cursive;
-    font-size: 9em;
+    font-size: 8em;
     color: rgb(0, 143, 219);
-    opacity: 0.9;
-    text-shadow: black 2px 2px 0, black -2px -2px 0, black -2px 2px 0, black 2px -2px 0;
+    opacity: 0.85;
+    text-shadow: black 2px 2px 0;
     text-align: center;
     word-spacing: -25px;
+    margin-bottom: 120px;
 }
 
 .start-screen .text .span-for {
@@ -81,10 +83,10 @@ body {
 }
 
 .start-screen .btn {
-    border: 2px solid black;
+    border: 4px groove rgb(110, 110, 110);
     border-radius: 10px;
     text-align: center;
-    padding: 10px 80px;
+    padding: 10px 15px;
     max-width: 250px;
     margin: 0 auto;
 }
@@ -101,7 +103,7 @@ body {
 }
 
 .start-screen .btn:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 204, 64, 0.3);
 }
 
 .start-screen .btn:active .btn-text {
