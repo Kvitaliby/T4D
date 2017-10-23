@@ -1,0 +1,109 @@
+.is_overlay {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#trailer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #trailer>video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #trailer>video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+
+/* Если есть поддержка object-fit (Chrome/Chrome для Android, Safari в iOS 8 и Opera), используем его: */
+
+@supports (object-fit: cover) {
+    #trailer>video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+body {
+    background: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.start-screen {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 2000;
+}
+
+.start-screen .text {
+    float: right;
+    font-family: 'Lobster', cursive;
+    font-size: 9em;
+    color: rgb(255, 255, 255);
+    text-shadow: black 2px 2px 0, black -2px -2px 0, black -2px 2px 0, black 2px -2px 0;
+    word-spacing: -0.2em;
+    margin-bottom: 1.5em;
+    margin-right: 0.7em;
+}
+
+.start-screen .text .span-for {
+    vertical-align: -0.4em;
+}
+
+.start-screen .text .span-drive {
+    vertical-align: -0.8em;
+    word-spacing: -0.2em;
+}
+
+.start-screen .btn {
+    float: right;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 80px;
+    max-width: 250px;
+    margin-right: 15em;
+}
+
+.start-screen a {
+    text-decoration: none;
+    color: white;
+}
+
+.start-screen .btn .btn-text {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    text-shadow: black 2px 2px 0;
+}
+
+.start-screen .btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.start-screen .btn:active .btn-text {
+    color: rgb(180, 180, 180);
+}
