@@ -1,20 +1,20 @@
 body {
-    margin: 0;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
     padding: 0;
 }
 
 .stroika .back-page1 {
-    position: absolute;
-    top: 80px;
-    left: 630px;
+    margin: 0 auto;
+}
+
+.stroika {
+    text-align: center;
 }
 
 .stroika p {
-    float: left;
     font-size: 3em;
     font-weight: bold;
-    margin-left: 300px;
-    margin-top: 230px;
     text-align: center;
     font-family: "Limelight", cursive;
     color: rgb(233, 243, 145);
